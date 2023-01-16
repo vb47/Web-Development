@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html language="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width"/>
+        <title>Advanced HTML</title>
+    </head>
+
+    <body>
+        <h1>Advanced HTML Concepts</h1>
+        <hr>
+
+        <!--Unordered Lists-->
+        <h2>Unordered Lists</h2>
+        <h3>Simple Unordered List</h3>
+        <ul>
+            <li>first item</li>
+            <li>second item</li>
+            <li>third item</li>
+        </ul>
+
+        <h3>Nesting an unordered list</h3>
+        <ul>
+            <li>Item 1</li>
+            <li>
+                Item 2
+                <ul>
+                    <li>Item 2.1</li>
+                    <li>Item 2.2</li>
+                </ul>
+            </li>
+            <li>
+                Item 3
+                <ul>
+                    <li>
+                        Item 3.1
+                        <ul>
+                            <li>Item 3.1.1</li>
+                            <li>Item 3.1.2</li>
+                            <li>Item 3.1.3</li>
+                        </ul>
+                    </li>
+                    <li>Item 3.2</li>
+                    <li>
+                        Item 3.3
+                        <ul>
+                            <li>Item 3.3.1</li>
+                            <li>Item 3.3.2</li>
+                        </ul>
+                    </li>
+                    <li>3.4</li>
+                </ul>
+            </li>
+            <li>Item 4</li>
+        </ul>
+        
+        <h3>Ordered List in Unordered List</h3>
+        <ul>
+            <li>Product 1</li>
+            <li>Product 2</li>
+            <li>
+                Product 3
+                <ol>
+                    <li>Sub-product 1</li>
+                    <li>Sub-product 2</li>
+                    <li>Sub-product 3</li>
+                    <li>Sub-Product 4</li>
+                </ol>
+            </li>
+            <li>Product 4</li>
+        </ul>
+
+        <!--Ordered List-->
+        <h2>Ordered List</h2>
+        <h3>Simple Ordered List using i</h3>
+        <p>Here we can also use type as "a", "A", "i", "I" and "1".</p>
+        <ol type="i">
+            <li>Apple</li>
+            <li>Banana</li>
+            <li>Mango</li>
+            <li>Pineaple</li>
+            <li>Lichi</li>
+        </ol>
+
+        <h3>Using start attribute</h3>
+        <ol start="3">
+            <li>Bottle</li>
+            <li>Glass</li>
+            <li>Plates</li>
+        </ol>
+
+        <h3>Using reversed attribute</h3>
+        <ol reversed>
+            <li>Ready</li>
+            <li>Steady</li>
+            <li>Go!</li>
+        </ol>
+
+        <hr/>
+        <h2>HTML Images</h2>
+        <h3 id="coffee">Simple Image</h3>
+        <img src="https://t4.ftcdn.net/jpg/02/70/72/91/360_F_270729106_g36ekHjIw28VYxoX7CWpctG6jDSh7YIe.jpg" alt="A Cup of coffee">
+
+        <h3>Image with preset width and Height</h3>
+        <img src="Resources/coffee.jpg" width="500px" height="300px">
+
+        <h3>Image with Higher fetch priority</h3>
+        <p>
+            fetchpriority Provides a hint of the relative priority to use when fetching the image.<br>
+            Allowed values:
+            <ol>
+                <li>high: signals a high-priority fetch relative to other images.</li>
+                <li>low: Signals a low-priority fetch relative to other images.</li>
+                <li>auto: Default: Signals automatic determination of fetch priority relative to other images.</li>
+            </ol>
+        </p>
+        <img src="data:image/jpeg;base64,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" fetchpriority="high">
+        <p><i>**This is supported only in Chromium Browsers.</i></p>
+
+        <hr>
+
+        <h2>HyperText</h2>
+        <h3>Simple HyperLink that takes page to new page</h3>
+        <a href="./01_HTML.html">HTML Basics</a><br>
+
+        <h3>Using the target attribute</h3>
+        <a href="https://www.google.com/" target="_self">Target: _self</a>
+        <p> the current browsing context. (Default)</p>
+        <a href="https://www.google.com/" target="_blank">Target: _blank</a>
+        <p> usually a new tab, but users can configure browsers to open a new window instead.</p>
+        <a href="https://www.google.com/" target="_parent">Target: _parent</a>
+        <p> the parent browsing context of the current one. If no parent, behaves as _self.</p>
+        <a href="https://www.google.com/" target="_top">Target: _top</a>
+        <p> the topmost browsing context (the "highest" context that's an ancestor of the current one). If no ancestors, behaves as _self.</p>
+
+        <h3>Linking to same section using id</h3>
+        <a href="#coffee">Navigate to Coffee image</a>
+
+        <hr>
+        <h2>HTML Forms</h2>
+        <h3>Simple Form for Login with autocomplete functionality</h3>
+        <p>Using get method, we are submitting the form, so the link after submission will become: file:///W:/Web%20Development/practice/02_Advanced_HTML.html?Username=Vaibhav&Password=vb123</p>
+        <form method="get">
+            <div><input type="text" placeholder="Username" autocomplete="Username" name="Username"></div>
+            <div><input type="password" placeholder="Password" autocomplete="Password" name="Password"></div>
+            <div><input type="submit"></div>
+        </form>
+
+        <h3>Simple Form using post method</h3>
+        <p>Forms with post method sends data using response body in JSON format.</p>
+        <form method="post">
+            <input type="email">
+            <button type="submit">Subscribe</button>
+        </form>
+
+        <hr>
+    </body>
+</html>
