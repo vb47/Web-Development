@@ -3,41 +3,14 @@ body {
     font-family: 'Merriweather', serif;
 }
 
+/*------------------------------------------------------------------*/
+
 .top-container {
     background-color: #E4F9F5;
     position: relative;
     margin: 0px;
     padding-top: 60px;
-    color: #66BFBF;
     text-align: center;
-}
-
-.profile {
-    text-align: left;
-    height: 300px;
-    margin: 250px auto 250px auto;
-    padding-top: 50px;
-    width: 70%;
-}
-
-.skills {
-    text-align: center;
-}
-
-.skill-row1 {
-    text-align: right;
-    height: 300px;
-    margin: 150px auto 150px auto;
-    padding-top: 50px;
-    width: 70%;
-}
-
-.skill-row2 {
-    text-align: left;
-    height: 300px;
-    margin: 150px auto 150px auto;
-    padding-top: 50px;
-    width: 70%;
 }
 
 .top-cloud {
@@ -57,16 +30,11 @@ body {
 }
 
 h1 {
+    color: #66BFBF;
     font-size: 5.62rem;
     margin: 50 auto 0 auto;
     font-family: 'Sacramento', cursive;
 
-}
-
-h2, h3 {
-    color: #11999E;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.8rem;
 }
 
 .my-job {
@@ -76,16 +44,18 @@ h2, h3 {
     font-weight: normal;
 }
 
-p {
-    font-size: 1.5rem;
-    font-family: 'Montserrat', sans-serif;
+/*------------------------------------------------------------------*/
+.middle-container {
+    margin: 0px;
 }
 
-a {
-    color: #11999e;
+.profile {
+    text-align: left;
+    height: 300px;
+    margin: 250px auto 250px auto;
+    padding-top: 50px;
+    width: 70%;
 }
-
-
 
 .logo {
     width: 25%;
@@ -96,9 +66,43 @@ a {
     margin-right: 30px;
 }
 
+/*------------------------------------------------------------------*/
+
+.skills {
+    text-align: center;
+}
+
+h2, h3 {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skill-row1 {
+    text-align: right;
+    height: 300px;
+    margin: 100px auto 100px auto;
+    padding-top: 50px;
+    width: 70%;
+}
+
 .web-img {
     float: right;
     margin-left: 30px;
+}
+
+.skill-row2 {
+    text-align: left;
+    height: 300px;
+    margin: 100px auto 100px auto;
+    padding-top: 50px;
+    width: 70%;
 }
 
 .chillies-img {
@@ -106,12 +110,10 @@ a {
     margin-right: 30px;
 }
 
-.middle-container {
-    margin: 0px;
-}
+/*------------------------------------------------------------------*/
 
-.middle-container p {
-    line-height: 2;
+a {
+    color: #11999e;
 }
 
 .bottom-container {
