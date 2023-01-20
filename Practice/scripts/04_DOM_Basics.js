@@ -4,6 +4,7 @@ document.querySelector(".btn1").addEventListener("click", function(){
 
 var colorRange = ["#9400D3", "#4B0082", "#0000FF", "#00FF00", "#FFFF00", "#FF7F00", "#FF0000"], count=0;
 var visibility = 0;
+var data="";
 
 document.querySelector(".btn2").addEventListener("click", function(){
     count++;
@@ -51,5 +52,13 @@ document.getElementById("refresh-btn").addEventListener("click", function(){
     else {
         document.querySelector("#result").innerHTML = "Draw ☕";
     }
+});
 
+document.querySelector("body").addEventListener("keydown", function(event){
+  console.log(event);
+  if(event.key == "Shift" || event.key == "Control" || event.key == "Backspace")
+    data=data;
+  else
+    data = data + event.key;
+  document.querySelector(".text-content").innerHTML = data;
 });
