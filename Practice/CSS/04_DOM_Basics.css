@@ -4,6 +4,13 @@ body {
   text-align: center;
 }
 
+hr {
+  border: dashed #576690 4px;
+  border-bottom: none;
+  width: 25%;
+  margin: 30px auto;
+}
+
 .header {
   position: relative;
   display: block;
@@ -27,14 +34,34 @@ h1 {
   font-size: 20px;
   background: #263159;
   padding: 10px 20px 10px 20px;
-  margin: 12px auto 12px auto;
   text-decoration: none;
   float: right;
+  position: relative;
 }
 
 .btn:hover {
   background: #251749;
   text-decoration: none;
+}
+
+.btn1 {
+  transform: translateY(100%);
+}
+
+.btn2 {
+  transform: translateY(50%);
+}
+
+.btn3 {
+  transform: translateY(55%);
+}
+
+.btn4 {
+  transform: translateY(50%);
+}
+
+.btn5 {
+  transform: translateY(90%);
 }
 
 .container {
@@ -52,3 +79,73 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   width: 70%;
 }
+
+.invisible {
+  visibility: hidden;
+}
+
+/*-------------------------------------------------------------------------------*/
+.dice-container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+#refresh-btn {
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #FFFBEB;
+  font-size: 20px;
+  background: #263159;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  display: block;
+  margin: 8px auto;
+}
+
+#refresh-btn:hover {
+  background: #251749;
+  text-decoration: none;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+
+.dice-h1 {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 8rem;
+  color: #4ECCA3;
+}
+
+.dice-p {
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+#result {
+  color: #251749;
+  font-size: 1.5rem;
+  margin: 5px auto 5px auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+

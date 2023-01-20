@@ -4,7 +4,7 @@
       <title>DOM Basics</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="./CSS/04_DOM_Basics.css">
-      <scripts src="./scripts/04_DOM_Basics.js"/>
+      
 
       <!--Importing Fonts-->
       <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,32 +16,55 @@
   </head>
   <body>
     <div class="header">
-      <h1>SAMPLE WEBSITE</h1>
+      <h1 id="heading">SAMPLE WEBSITE</h1>
     </div>
 
     <div class="container">
-      <p class="description">Click here to change contents of h1 tag.</p>
-      <button class="btn">Click Me</button>
+      <p class="description">I am using Query Selector to access button object uing which I will be changing H1 content.</p>
+      <button class="btn btn1">Change H1</button>
     </div>
 
     <div class="container">
-      <p class="description">Click here to change contents of h1 tag.</p>
-      <button class="btn">Click Me</button>
+      <p class="description" id="changeColor">Accessing CSS Property to change color of the text.</p>
+      <button class="btn btn2">Change Color</button>
     </div>
 
     <div class="container">
-      <p class="description">Click here to change contents of h1 tag.</p>
-      <button class="btn">Click Me</button>
+      <p class="description">Create Alert to user whenever button is clicked.</p>
+      <button class="btn btn3">Send Alert</button>
     </div>
 
     <div class="container">
-      <p class="description">Click here to change contents of h1 tag.</p>
-      <button class="btn">Click Me</button>
+      <p class="description" id="printUsername">Create Alert tag with input elements.</p>
+      <button class="btn btn4">Send Alert</button>
     </div>
 
     <div class="container">
-      <p class="description">Click here to change contents of h1 tag.</p>
-      <button class="btn">Click Me</button>
+      <p class="description" id="visibleObject">We can make content invisible by adding class to object.</p>
+      <button class="btn btn5">Toggle Visibility</button>
     </div>
+
+    <hr>
+
+    <div class="dice-container">
+      <button id="refresh-btn">Refresh Me</button>
+
+      <div class="dice">
+        <p class="description">Player 1</p>
+        <img class="img1" src="./Resources/dice1.png">
+      </div>
+
+      <div class="dice">
+        <p class="description">Player 2</p>
+        <img class="img2" src="./Resources/dice2.png">
+      </div>
+
+      <h3 id="result"></h3>
+    </div>
+
+    <hr>
+
+
   </body>
+  <script src="./scripts/04_DOM_Basics.js"></script>
 </html>
