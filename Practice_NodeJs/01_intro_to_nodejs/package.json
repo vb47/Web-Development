@@ -1,0 +1,15 @@
+{
+  "name": "intro_to_nodejs",
+  "version": "1.0.0",
+  "description": "This is my first nodejs project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ECHO ----------- Intro To NodeJs -----------"
+  },
+  "author": "Vaibhav Alur",
+  "license": "ISC",
+  "dependencies": {
+    "superheroes": "^3.0.0",
+    "supervillains": "^3.1.0"
+  }
+}

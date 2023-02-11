@@ -1,0 +1,47 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>Quote of the day</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap" rel="stylesheet">    
+    </head>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #243763;
+            color: #FF6E31;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            display: inline-block;
+            margin: 0px;
+            width: 100vh;
+            height: 100vh;
+        }
+
+        .quote {
+            padding-top: 40%;
+            display: block;
+            margin-top: auto;
+        }
+
+        h1 {
+            font-family: 'Azeret Mono', monospace;
+            font-style: normal;
+            font-size: 230%;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="quote">
+                <h1><%= quoteOfTheDay %></h1>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "api_practice",
+  "version": "1.0.0",
+  "description": "This is a practice module for API to use endpoints, paths and parameters",
+  "main": "server.js",
+  "scripts": {
+    "test": "ECHO api_practice running",
+    "start": "node server.js"
+  },
+  "author": "Vaibhav Alur",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "https": "^1.0.0",
+    "json": "^11.0.0",
+    "nodejs": "^0.0.0"
+  }
+}

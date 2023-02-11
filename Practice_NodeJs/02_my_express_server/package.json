@@ -1,0 +1,14 @@
+{
+  "name": "my_express_server",
+  "version": "1.0.0",
+  "description": "My first backend server using express.js framework.",
+  "main": "server.js",
+  "scripts": {
+    "test": "ECHO ----------- My First Server --------------"
+  },
+  "author": "Vaibhav Alur",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
