@@ -13,6 +13,7 @@ app.get("/", function(req, res){
     res.write("<ul>");
     res.write("<li>Understanding Enndpoints: <a href='/endpoint'>Link</a></li>");
     res.write("<li>Understanding Paths: <a href='/paths'>Link</a></li></ul>");
+    res.write("<li>Understanding Authentication: <a href='/authentication'>Link</a></li></ul>");
     res.send();
 });
 
