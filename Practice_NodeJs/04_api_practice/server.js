@@ -96,6 +96,31 @@ app.post("/joke", function(req, res){
     });
 });
 
+/**
+ * Everytime we make a request to API, they have to be able to identify you as a developer and
+ * keep track of how often you use the resources of the server.
+ * This feature is very helpful to monitize the services provided by the api.
+ * 
+ * Consider the API - OpenWeather Map
+ * We can access Weather Info upto 60 requests per minute for free users.
+ */
+app.get("/authentication", function(req, res){
+    const key = "79ebe063e419876aefd1495969b868cb";
+    var APIurl = "https://api.openweathermap.org/data/2.5/weather?q=Verna,IN&units=metrics&appid=";
+
+    APIurl += key;
+
+    console.log(APIurl);
+    https.get(APIurl, function(resp){
+        resp.on("data", function(data){
+            const currentWeather = JSON.parse(data);
+            console.log("Current Weather Data: ");
+            console.log(currentWeather);
+            res.render("weather", {weatherData: currentWeather.weather[0].description + " | " + currentWeather.main.temp + " Celcius"});
+        });
+    });
+});
+
 app.listen(port, function(req, res){
     console.log("Running server at port " + port);
 });
