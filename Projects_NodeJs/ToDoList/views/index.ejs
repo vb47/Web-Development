@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDoList</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" href="images/list.png">
+    </head>
+
+    <body>
+        <div class="box" id="heading">
+            <h1>TodoList</h1>
+        </div>
+        
+
+        <div class="box">
+            <div class="item">
+                <input type="checkbox">
+                <p>Biscuits</p>
+            </div>
+            <div class="item">
+                <input type="checkbox">
+                <p>Milk</p>
+            </div>
+
+            <% for(let i=0; i<newListItems.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= newListItems[i] %></p>
+            </div>
+            <% } %>
+
+            <form method="POST" action="/" class="item">
+                <input type="text" placeholder="Add an item" name="newItem">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </body>
+</html>
