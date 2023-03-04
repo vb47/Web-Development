@@ -6,6 +6,8 @@ const port = 3000;
 
 // View engine setup
 app.set('view engine', 'ejs');
+// We have to tell Nodejs that we are using body-parser
+// know more here - https://stackoverflow.com/questions/55558402/what-is-the-meaning-of-bodyparser-urlencoded-extended-true-and-bodypar
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", function(req, res){
