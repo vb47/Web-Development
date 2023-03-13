@@ -1,0 +1,16 @@
+{
+  "name": "05_simple_mongodb_app",
+  "version": "1.0.0",
+  "description": "Simple MongoDb Application to run MongoDB commands using Node.js Native Driver.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Running Simple MongoDB Application\""
+  },
+  "author": "Vaibhav Alur",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "mongodb": "^5.1.0",
+    "nodemon": "^2.0.21"
+  }
+}
