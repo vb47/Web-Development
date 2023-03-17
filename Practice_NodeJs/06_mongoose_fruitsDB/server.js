@@ -68,16 +68,46 @@ const readDatabase = async () => {
 /**
  * Function: Function to update a data into the database
  */
-const updateData = async (fruitName, value) => {
+const updateData = async (id, value, rating, review) => {
     console.log("Updating " + fruitName + " to " + value + ".");
-    const res = await Fruit.updateOne({_id: "641357079e047d84238965a1"}, {name: value, rating: 2.0, review: "Orangeeeeee"});
+    const res = await Fruit.updateOne({_id: id}, {name: value, rating: rating, review: review});
     console.log(res.matchedCount);
 }
 
-app.listen(3000, async () => {
+/**
+ * Function: Function to update a data into the database
+ */
+const updateManyData = async (name, value, rating, review) => {
+    console.log("Updating " + fruitName + " to " + value + ".");
+    const res = await Fruit.updateMany({_name: name}, {name: value, rating: rating, review: review});
+    console.log(res.matchedCount);
+}
+
+/**
+ * Function: Function to delete one data
+ */
+const deleteOneData = async (id) => {
+	console.log("Deleting data with id - " + id);
+	const deletedCount = await Fruit.deleteOne({_id: id});
+	console.log("Deleted " + deletedCount + " document.");
+}
+
+/**
+ * Function: Function to delete many documents at a time
+ */
+const deleteManyData = async (name) => {
+	console.log("Deleting many data, ");
+	const deletedCount = await Fruit.deleteMany({name: name});
+	console.log("Deleted " + deletedCount + " documents.");
+}
+
+app.listen(3000, () => {
     console.log("Server connected at port 3000")
     connectDB();
     //insertElement();
-    updateData("Banana", "Worange");
-    await readDatabase();
+    //updateData("641357079e047d84238965a1", "Worange", 2.0, "Orangeeeeee");
+	//updateManyData("Apple", "Apple", 5.0, "I love apple milkshake though.");
+	//deleteOneData(""); // TODO: add id here
+	//deleteManyData("Apple"); // TODO: try this after delete One Data.
+	readDatabase();
 });
