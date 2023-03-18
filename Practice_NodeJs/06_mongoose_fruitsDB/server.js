@@ -78,8 +78,8 @@ const updateData = async (id, value, rating, review) => {
  * Function: Function to update a data into the database
  */
 const updateManyData = async (name, value, rating, review) => {
-    console.log("Updating " + fruitName + " to " + value + ".");
-    const res = await Fruit.updateMany({_name: name}, {name: value, rating: rating, review: review});
+    console.log("Updating " + name + " to " + value + ".");
+    const res = await Fruit.updateMany({name: name}, {name: value, rating: rating, review: review});
     console.log(res.matchedCount);
 }
 
@@ -97,7 +97,7 @@ const deleteOneData = async (id) => {
  */
 const deleteManyData = async (name) => {
 	console.log("Deleting many data, ");
-	const deletedCount = await Fruit.deleteMany({name: name});
+	const deletedCount = await Fruit.deleteMany({name: name}).exec();
 	console.log("Deleted " + deletedCount + " documents.");
 }
 
@@ -107,7 +107,7 @@ app.listen(3000, () => {
     //insertElement();
     //updateData("641357079e047d84238965a1", "Worange", 2.0, "Orangeeeeee");
 	//updateManyData("Apple", "Apple", 5.0, "I love apple milkshake though.");
-	//deleteOneData(""); // TODO: add id here
+	//deleteOneData("641357079e047d84238965a1");
 	//deleteManyData("Apple"); // TODO: try this after delete One Data.
 	readDatabase();
 });

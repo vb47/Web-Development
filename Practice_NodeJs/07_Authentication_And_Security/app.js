@@ -4,8 +4,10 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
 
+
+// Configuring Server
 const app = express();
-const uri = "";
+const uri = "mongodb://Vaibhav1:Vaibhav1.mongodb23@ac-pr1cjml-shard-00-00.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-01.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-02.qrpn2uc.mongodb.net:27017/userCredentials?ssl=true&replicaSet=atlas-146fiy-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
@@ -13,6 +15,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+
+/*********************************** Connecting to database *****************************************/
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(uri, {
@@ -27,6 +31,7 @@ const connectDB = async () => {
 }
 connectDB();
 
+/***************************** Defining Structure of Database *************************************/
 const userSchema = {
     email: String,
     password: String
@@ -35,6 +40,7 @@ const userSchema = {
 const User = new mongoose.model("User", userSchema);
 
 
+/******************************** Routing urls with views ****************************************/
 app.get('/', function(req, res){
     res.render('home');
 });
@@ -46,16 +52,16 @@ app.route('/login')
 
     .post(async function(req, res){
         try {
-            const doc = await Fruit.findOne({email: req.body.username});
+            const doc = await User.findOne({email: req.body.username});
             if(doc){
                 if(doc.password == req.body.password)
                     res.render('secrets');
             }
+            else 
+                res.send('<h1>Wrong Credentials</h1>');
         } catch(err) {
             console.log(err);
         }
-        
-
     });
 
 app.route('/register')
@@ -78,7 +84,10 @@ app.route('/register')
         
     });
 
+/****************************** Listening to port 3000  ****************************************/
 
 app.listen(3000, function() {
     console.log("Server started on port 3000.");
 });
+
+/************************************************************************************************/
