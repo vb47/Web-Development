@@ -3,9 +3,10 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const encrypt = require('mongoose-encryption'); 
 
 
-// Configuring Server
+// Configuring Server+
 const app = express();
 const uri = "mongodb://Vaibhav1:Vaibhav1.mongodb23@ac-pr1cjml-shard-00-00.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-01.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-02.qrpn2uc.mongodb.net:27017/userCredentials?ssl=true&replicaSet=atlas-146fiy-shard-0&authSource=admin&retryWrites=true&w=majority";
 
@@ -32,10 +33,14 @@ const connectDB = async () => {
 connectDB();
 
 /***************************** Defining Structure of Database *************************************/
-const userSchema = {
+const userSchema = mongoose.Schema({
     email: String,
     password: String
-};
+});
+
+const secret = "Thisismylittlesecret";
+
+userSchema.plugin(encrypt, {secret: secret, encryptedFields: ['password']});
 
 const User = new mongoose.model("User", userSchema);
 
