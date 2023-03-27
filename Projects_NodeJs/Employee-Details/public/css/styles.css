@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F6F1F1;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #F6F1F1;
+}
+
+.header {
+    padding: 4px;
+    display: block;
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    background-color: #000000;
+}
+
+.header h1 {
+    color: #19A7CE;
+}
+
+.search {
+    display: block;
+    background-color: #F6F1F1;
+    padding: 4px;
+    margin: 2px;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.search h3 {
+    display: inline-block;
+    font-size: 1.3rem;
+}
+
+.lname-h3 {
+    margin: 0px 2px 0px 60px;
+    display: inline-block;
+}
+
+.search form {
+    display: inline-block;
+    margin: 2px;
+}
+
+.search-btn {
+    padding: 3px;
+}
+
+.search-btn:hover {
+    background-color: #146C94;
+    color: #F6F1F1;
+}
+
+.search input {
+    display: inline-block;
+    padding: 1.5px;
+    margin: 1px;
+    font-size: 1.3rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.add-employee {
+    margin-right: 5px;
+    padding: 1.5px;
+    margin: 1px;
+    font-size: 1.3rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.add-employee:hover {
+    background-color: #146C94;
+    color: #F6F1F1;
+}
+
+
+/*********************************************************************************************/
+
+.tablular-section {
+    display: block;
+    text-align: center;
+    background-color: #F6F1F1;
+}
+
+table {
+    display: inline-block;
+    border: 2px solid;
+    border-collapse: collapse;
+    border-color: #146C94;
+}
+
+
+.edit-btn {
+    color: black;
+    transition: 0.05s;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.edit-btn:hover {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.delete-btn {
+    color: black;
+    border: none;
+    background: none!important;
+    padding: 0!important;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    color: red;
+}
+
+
+
+
+tr, td {
+    width: 15%;
+    font-size: 1.2rem;
+    padding: 2px;
+    border: 1px solid;
+    border-color: #146C94;
+    border-collapse: collapse;
+    font-family: 'DM Sans', sans-serif;
+}
+
+thead {
+    border-color: #146C94;
+    border-collapse: collapse;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+
+/******************************************************************************************/
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 2.5px;
+}
+
+.popup-container-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup-box {
+    margin: 140px auto;
+    background: #F6F1F1;
+    border-radius: 5px;
+    width: 35%;
+    padding: 25px 10px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.3rem;
+    display: block;
+    text-align: center;
+}
+
+
+.popup-header {
+    display: block;
+    padding: 1px;
+    text-align: center;
+}
+
+.popup-header h2 {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+.close:hover {
+    color: #06D85F;
+  }
+
+.popup-box form {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.key-value-field {
+    display: inline-block;
+    width: 35%;
+}
+
+.key-value-field h3 {
+    display: inline-block;
+    margin-right: 4px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.key-value-field input {
+    display: inline-block;
+    width: 90%;
+    padding: 1px 1.5px;
+    margin: 0px 1px;
+    font-size: 1.3rem;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 5px;
+}
+
+#popup-submit {
+    display: block;
+    text-align: right;
+    padding: 10px;
+    margin-top: 10px;
+
+
+}
+
+#popup-submit-btn {
+    padding: 3px;
+    margin: 2px;
+    background-color: #F6F1F1;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#popup-submit-btn:hover {
+    background-color: #146C94;
+    color: #F6F1F1;
+}

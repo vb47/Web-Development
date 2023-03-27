@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Details</title>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container">
+            <!------------------------------------------ Header ------------------------------------------------->
+            <div class="header"><h1>Employee Details</h1></div>
+
+            <!---------------------------- Search Employee by first and last name ------------------------------->
+            <div class="search">
+                <form method="post" action="/search">
+                    <h3>First Name: </h3>
+                    <input type="text" name="fname" value="<%= searchFName %>">
+
+                    <h3 class="lname-h3">Last Name: </h3>
+                    <input type="text" name="lname" value = "<%= searchLName %>">
+
+                    <input class="search-btn" type="submit" placeholder="Search">
+                </form>
+                <button class="add-employee" onclick="editUserCredentials('add', '', '', '', '', '')">Add Employee</button>
+            </div>
+
+            <!------------------------------------ Display Table contents -------------------------------------->
+            <div class="tablular-section">
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="action">Action</td>
+                            <td class="firstName">First Name</td>
+                            <td class="lastName">Last Name</td>
+                            <td class="email">Email</td>
+                            <td class="mobile">Mobile</td>
+                            <td class="salary">Salary</td>
+                        </tr>
+                        <tbody>
+                            <% for(let i=0; i<firstNameList.length; i++){ %>
+                                <tr>
+                                    <td class="action">
+                                        <a class="edit-btn" onclick="editUserCredentials('edit', '<%= firstNameList[i] %>', '<%= lastNameList[i] %>', '<%= emailList[i] %>', '<%= mobileList[i] %>', '<%= salaryList[i] %>')">Edit</a>
+                                        /
+                                        <a class="delete-btn" onclick="editUserCredentials('delete', '<%= firstNameList[i] %>', '<%= lastNameList[i] %>', '<%= emailList[i] %>', '<%= mobileList[i] %>', '<%= salaryList[i] %>')">Delete</a>
+                                    </td>
+                                        
+                                        
+                                    <td class="firstName"><%= firstNameList[i] %></td>
+                                    <td class="lastName"><%= lastNameList[i] %></td>
+                                    <td class="email"><%= emailList[i] %></td>
+                                    <td class="mobile"><%= mobileList[i] %></td>
+                                    <td class="salary"><%= salaryList[i] %></td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                    </thead>
+                </table>
+            </div>
+
+        </div>
+                <div class="popup-container">
+                    <div class="popup-box">
+                        <div class="popup-header">
+                            <h2 id="popup-heading">Edit User Details</h2>
+                            <a class="close" onclick="closePopupWindow()">&times;</a>
+                        </div>
+                        <form id="popup-form" method="post" action="/edit">
+                            <div class="key-value-field">
+                                <h3>First Name </h3>
+                                <input type="text" name="firstName" id="popup-fname">
+                            </div>
+                            <div class="key-value-field">
+                                <h3>Last Name </h3>
+                                <input type="text" name="lastName" id="popup-lname">
+                            </div>
+                            <div class="key-value-field">
+                                <h3>Email </h3>
+                                <input type="text" name="email" id="popup-email">
+                            </div>
+                            <div class="key-value-field">
+                                <h3>Mobile </h3>
+                                <input type="text" name="mobile" id="popup-mobile">
+                            </div>
+                            <div class="key-value-field">
+                                <h3>Salary </h3>
+                                <input type="text" name="salary" id="popup-salary">
+                            </div>
+
+                            <div id="popup-submit">
+                                <button type="submit" id="popup-submit-btn" onclick="document.querySelector('#popup-email').disabled = false;">Save Changes</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
