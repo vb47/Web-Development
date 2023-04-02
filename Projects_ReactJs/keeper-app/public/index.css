@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    background-color: #eee;
+}
+html {
+    font-family: "Montserrat", sans-serif;
+}
+
+/*************************** Header ***************************/
+
+.header {
+    display: block;
+    padding: 16px 32px;
+    background-color: #f5ba13;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+
+.heading {
+    color: white;
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+    size: 2rem;
+    margin: 1px;
+}
+
+/*************************** Footer ***************************/
+
+.footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+.footer p {
+    color: #ccc;
+    margin-bottom: 6px;
+}
+
+/*************************** Note ***************************/
+
+.note {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px #ccc;
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+}
+
+.note h3 {
+    font-size: 1.1em;
+    margin-top: 3px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
