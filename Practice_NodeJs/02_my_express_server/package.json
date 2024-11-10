@@ -6,6 +6,7 @@
   "scripts": {
     "test": "ECHO ----------- My First Server --------------"
   },
+  "type": "module",
   "author": "Vaibhav Alur",
   "license": "ISC",
   "dependencies": {

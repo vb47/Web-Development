@@ -25,8 +25,9 @@ const Fruit = mongoose.model("fruit", fruitSchema);
  * Function: Connect to Database with URI given in config/config.env
  */
 const connectDB = async () => {
-    try {
-        const conn = await mongoose.connect("mongodb://Vaibhav1:Vaibhav1.mongodb23@ac-pr1cjml-shard-00-00.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-01.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-02.qrpn2uc.mongodb.net:27017/fruitsDB?ssl=true&replicaSet=atlas-146fiy-shard-0&authSource=admin&retryWrites=true&w=majority", {
+    try { // 
+		// mongodb://Vaibhav1:Vaibhav1.mongodb23@ac-pr1cjml-shard-00-00.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-01.qrpn2uc.mongodb.net:27017,ac-pr1cjml-shard-00-02.qrpn2uc.mongodb.net:27017/fruitsDB?ssl=true&replicaSet=atlas-146fiy-shard-0&authSource=admin&retryWrites=true&w=majority
+        const conn = await mongoose.connect("mongodb+srv://Vaibhav1:Vaibhav1.mongodb23@cluster0.qrpn2uc.mongodb.net/fruitsDB?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
         });
@@ -46,7 +47,7 @@ const connectDB = async () => {
 const insertElement = async () => {
 	const mango = new Fruit({
 		name: "Mongo",
-		rating: 11.0,
+		rating: 10.0,
 		review: "My favorite fruit."
 	});
 

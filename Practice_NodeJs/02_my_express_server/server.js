@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express"; // modern ES Lint import style
 const app = express();
 const port = 3000;
 

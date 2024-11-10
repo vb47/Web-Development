@@ -1,6 +1,6 @@
 const express = require("express");
-const https = require("https");
-var bodyParser = require('body-parser');
+const https = require("https"); // to make api calls
+var bodyParser = require('body-parser'); // for rendering embedded javascript files
 const app = express();
 const port = 3000;
 
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.get("/", function(req, res){
     res.write("<h1>API Practice:</h1> <br>");
     res.write("<ul>");
-    res.write("<li>Understanding Enndpoints: <a href='/endpoint'>Link</a></li>");
+    res.write("<li>Understanding Endpoints: <a href='/endpoint'>Link</a></li>");
     res.write("<li>Understanding Paths: <a href='/paths'>Link</a></li></ul>");
     res.write("<li>Understanding Authentication: <a href='/authentication'>Link</a></li></ul>");
     res.send();
